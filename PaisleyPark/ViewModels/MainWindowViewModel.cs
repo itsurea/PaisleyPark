@@ -39,7 +39,7 @@ namespace PaisleyPark.ViewModels
 		private readonly Version CurrentVersion;
 		private string GameVersion;
 		public string DiscordUri { get; private set; } = "https://discord.gg/hq3DnBa";
-		private static readonly Uri OffsetUrl = new Uri("https://raw.githubusercontent.com/LeonBlade/PaisleyPark/master/Offsets/");
+		private static readonly Uri OffsetUrl = new Uri("https://raw.githubusercontent.com/itsurea/PaisleyPark/master/Offsets/");
 
 #pragma warning disable IDE1006 // Naming Styles
 
@@ -357,7 +357,7 @@ namespace PaisleyPark.ViewModels
 				// Launch the web browser to the latest release.
 				if (result == MessageBoxResult.Yes)
 				{
-					Process.Start("https://github.com/LeonBlade/PaisleyPark/releases/latest");
+					Process.Start("https://github.com/itsurea/PaisleyPark/releases/latest");
 				}
 			}
 		}
