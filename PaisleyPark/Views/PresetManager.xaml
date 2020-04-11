@@ -9,7 +9,7 @@
         p:DialogCloser.DialogResult="{Binding Path=DialogResult}"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="Preset Manager" 
+        Title="프리셋 관리" 
         WindowStartupLocation="CenterOwner"
         Height="373" 
         Width="340" 
@@ -23,7 +23,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="OK" Margin="0,0,84,10"
+        <Button Content="확인" Margin="0,0,84,10"
                 Command="{Binding Path=OKCommand}" CommandParameter="{Binding ElementName=window, Mode=OneWay}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" />
         <StackPanel Margin="0,10,8,35" HorizontalAlignment="Right" Width="69">
             <StackPanel.Resources>
@@ -32,15 +32,15 @@
                     <Setter Property="Padding" Value="0,2" />
                 </Style>
             </StackPanel.Resources>
-            <Button Content="New" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="Create a new preset."
+            <Button Content="생성하기" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="새로운 프리셋을 만듭니다."
                     Command="{Binding AddCommand}" />
-            <Button Content="Delete" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="Delete the selected preset."
+            <Button Content="삭제하기" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="선택한 프리셋을 삭제합니다."
                     Command="{Binding RemoveCommand}"/>
-            <Button Content="Edit" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="Edit a selected preset."
+            <Button Content="수정하기" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="선택한 프리셋을 수정합니다."
                     Command="{Binding EditCommand}" />
-            <Button Content="Import" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="Import a new preset."
+            <Button Content="불러오기" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="새로운 프리셋을 불러옵니다."
                     Command="{Binding ImportCommand}" />
-            <Button Content="Export" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="Export a selected preset to clipboard."
+            <Button Content="내보내기" VerticalAlignment="Top" HorizontalAlignment="Stretch" ToolTip="선택판 프리셋을 클립보드로 내보냅니다."
                     Command="{Binding ExportCommand}" />
         </StackPanel>
     </Grid>

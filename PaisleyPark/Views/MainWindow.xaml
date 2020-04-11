@@ -48,13 +48,13 @@
         </Grid>
 
 
-        <Button Content="Load" Margin="0,5" Command="{Binding LoadPresetCommand}"/>
+        <Button Content="불러오기" Margin="0,5" Command="{Binding LoadPresetCommand}"/>
 
-        <GroupBox Header="Settings" Height="78">
+        <GroupBox Header="설정" Height="78">
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
-                    <Label Content="Delay" VerticalAlignment="Center" Margin="0,0,5,0" Height="26"/>
-                    <Label Content="Port" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <Label Content="딜레이" VerticalAlignment="Center" Margin="0,0,5,0" Height="26"/>
+                    <Label Content="포트" VerticalAlignment="Center" Margin="0,0,5,0"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
 
@@ -66,8 +66,8 @@
                     <StackPanel Height="26" Orientation="Horizontal">
                         <p:NumericTextBox TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" ToolTip="Port for HTTP Server."
                                             Text="{Binding UserSettings.Port, UpdateSourceTrigger=PropertyChanged}" Width="60"/>
-                        <Button Content="Start" Margin="10,2,0,2" Padding="10,2" Command="{Binding StartServerCommand}"/>
-                        <Button Content="Stop" Margin="10,2,0,2" Padding="10,2" Command="{Binding StopServerCommand}"/>
+                        <Button Content="시작" Margin="10,2,0,2" Padding="10,2" Command="{Binding StartServerCommand}"/>
+                        <Button Content="중지" Margin="10,2,0,2" Padding="10,2" Command="{Binding StopServerCommand}"/>
                         <CheckBox IsChecked="{Binding UserSettings.HTTPAutoStart}" Margin="5" VerticalAlignment="Center" ToolTip="Autostart server" />
                     </StackPanel>
 
@@ -76,10 +76,8 @@
             </StackPanel>
 
         </GroupBox>
-
-        <Label HorizontalAlignment="Right">
-            <Hyperlink Command="{Binding DiscordCommand}">Join the Discord</Hyperlink>
-        </Label>
+        <Label Content="Made By LeonBlade" HorizontalAlignment="Right" Height="27" Margin="0,0,0,0" Width="120"/>
+        <Label Content="Modified by 츠링@모그리" HorizontalAlignment="right" Height="27" Margin="0,-8,0,0" Width="152"/>
 
     </StackPanel>
 

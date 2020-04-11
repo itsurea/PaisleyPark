@@ -13,16 +13,16 @@
     <StackPanel Orientation="Horizontal">
         <Image Margin="20 20 10 0" Width="50" Height="50" VerticalAlignment="Top" Source="/PaisleyParkUpdater;component/paisleypark.ico" />
         <StackPanel Margin="10" Width="520">
-            <Label Content="A new version of Paisley Park is available!" FontWeight="Bold" FontSize="14" />
-            <Label Content="{Binding UpdateString, FallbackValue='Would you like to download it now?'}" />
-            <Label Content="Release Notes:" FontWeight="Bold" />
+            <Label Content="새로운 버전의 Paisley Park를 이용할 수 있습니다!" FontWeight="Bold" FontSize="14" />
+            <Label Content="{Binding UpdateString, FallbackValue='지금 다운로드 하시겠습니까?'}" />
+            <Label Content="변경사항:" FontWeight="Bold" />
             <Border Margin="0 10" BorderBrush="#FFBCBCBC" Background="#FFBCBCBC">
                 <WebBrowser Margin="1" Height="150" local:BrowserBehavior.Html="{Binding HTML}" />
             </Border>
             <DockPanel>
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                    <Button Margin="0 0 2 0" Padding="20 2" Click="OnNoClick">No</Button>
-                    <Button Margin="10 0 0 0" Padding="20 2" BorderBrush="#FF7A0159" Background="#FFC76897" Foreground="White" Click="OnInstallClick">Install Update</Button>
+                    <Button Margin="0 0 2 0" Padding="20 2" Click="OnNoClick">아니오</Button>
+                    <Button Margin="10 0 0 0" Padding="20 2" BorderBrush="#FF7A0159" Background="#FFC76897" Foreground="White" Click="OnInstallClick">업데이트 설치</Button>
                 </StackPanel>
             </DockPanel>
         </StackPanel>

@@ -10,7 +10,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         p:DialogCloser.DialogResult="{Binding Path=DialogResult}"
         mc:Ignorable="d"
-        Title="Process Selector" 
+        Title="프로세스 선택" 
         SizeToContent="Height"
         ResizeMode="CanMinimize"
         Top="{Binding UserSettings.Top, Mode=TwoWay}"
@@ -26,8 +26,8 @@
     
     <StackPanel Margin="10">
         <DockPanel>
-            <Label Content="Processes" VerticalAlignment="Center" />
-            <Button Content="Refresh" Margin="0,5" HorizontalAlignment="Right" Padding="20,2" Command="{Binding Path=RefreshCommand}"/>
+            <Label Content="프로세스" VerticalAlignment="Center" />
+            <Button Content="새로고침" Margin="0,5" HorizontalAlignment="Right" Padding="20,2" Command="{Binding Path=RefreshCommand}"/>
         </DockPanel>
         <ListBox ItemsSource="{Binding Path=ProcessList, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=SelectedProcess}" Height="264">
             <ListBox.ItemTemplate>
@@ -41,12 +41,12 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <DockPanel>
-            <Button Content="View Presets" Margin="0,5,5,5" HorizontalAlignment="Left" Padding="20,2" ToolTip="Not all functionality will be present if the game isn't loaded!"
+            <Button Content="프리셋 보기" Margin="0,5,5,5" HorizontalAlignment="Left" Padding="20,2" ToolTip="Not all functionality will be present if the game isn't loaded!"
                         Command="{Binding Path=ManageCommand}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Switch to" Margin="0,5,5,5" HorizontalAlignment="Right" Padding="20,2"
+                <Button Content="전환하기" Margin="0,5,5,5" HorizontalAlignment="Right" Padding="20,2"
                         Command="{Binding Path=SwitchCommand}"/>
-                <Button Content="OK" Margin="0,5" HorizontalAlignment="Right" Padding="20,2"
+                <Button Content="확인" Margin="0,5" HorizontalAlignment="Right" Padding="20,2"
                         Command="{Binding Path=OKCommand}" CommandParameter="{Binding ElementName=window, Mode=OneWay}" />
             </StackPanel>
         </DockPanel>
