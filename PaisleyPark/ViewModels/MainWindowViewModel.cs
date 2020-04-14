@@ -270,7 +270,7 @@ namespace PaisleyPark.ViewModels
 			{
 				logger.Info($"Latest version {GameVersion} does not match the latest game version in settings {UserSettings.LatestGameVersion}");
 
-				var result = MessageBox.Show("There are new offsets available from the web. Would you like to use these offsets?", "Paisley Park", MessageBoxButton.YesNo, MessageBoxImage.Question);
+				var result = MessageBox.Show("새로운 오프셋이 업데이트 되었습니다. 다운로드 하시겠습니까?", "Paisley Park", MessageBoxButton.YesNo, MessageBoxImage.Question);
 				if (result == MessageBoxResult.Yes)
 				{
 					logger.Info("User is downloading latest offsets.");
