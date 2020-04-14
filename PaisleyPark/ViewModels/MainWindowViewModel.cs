@@ -797,7 +797,7 @@ namespace PaisleyPark.ViewModels
 			catch (Exception ex)
 			{
 				logger.Error(ex, "Could not start Nancy host.");
-				MessageBox.Show($"Could not start the HTTP server on port {UserSettings.Port}!", "Paisley Park", MessageBoxButton.OK, MessageBoxImage.Error);
+				MessageBox.Show($"포트 {UserSettings.Port}에서 HTTP 서버를 실행할 수 없습니다!", "Paisley Park", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
 

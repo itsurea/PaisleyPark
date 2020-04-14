@@ -68,7 +68,7 @@
                                             Text="{Binding UserSettings.Port, UpdateSourceTrigger=PropertyChanged}" Width="60"/>
                         <Button Content="시작" Margin="10,2,0,2" Padding="10,2" Command="{Binding StartServerCommand}"/>
                         <Button Content="중지" Margin="10,2,0,2" Padding="10,2" Command="{Binding StopServerCommand}"/>
-                        <CheckBox IsChecked="{Binding UserSettings.HTTPAutoStart}" Margin="5" VerticalAlignment="Center" ToolTip="Autostart server" />
+                        <CheckBox IsChecked="{Binding UserSettings.HTTPAutoStart}" Margin="5" VerticalAlignment="Center" ToolTip="서버 자동시작" />
                     </StackPanel>
 
                 </StackPanel>
